@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@startpage/bookmarks": "^0.2.6",
     "@startpage/local-storage": "^0.2.6",
     "@startpage/preset": "^0.2.5",
