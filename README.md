@@ -22,7 +22,7 @@ This is my personal New Tab page which I use as home in my browsers. I use it to
 
 ## :trumpet: Technologies
 
-![React Icon](/assets/technologies/react.png)
-![Vite Icon](/assets/technologies/vite.png)
-![Heroicons Icon](/assets/technologies/hero-icons.png)
-![Docker Icon](/assets/technologies/docker.png)
+<img src="/assets/technologies/react.png" alt="React Icon" width="50px"/>
+<img src="/assets/technologies/vite.png" alt="Vite Icon" width="50px"/>
+<img src="/assets/technologies/hero-icons.png" alt="Heroicons Icon" width="150px"/>
+<img src="/assets/technologies/docker.png" alt="Docker Icon" width="50px"/>
