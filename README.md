@@ -19,3 +19,10 @@ This is my personal New Tab page which I use as home in my browsers. I use it to
 - Bookmarks :bookmark:
   - Default bookmarks :heavy_check_mark:
   - Customization of bookmarks (CRUD)
+
+## :trumpet: Technologies
+
+![React Icon][/assets/technologies/react.png]
+![Vite Icon][/assets/technologies/vite.png]
+![Heroicons Icon][/assets/technologies/hero-icons.png]
+![Docker Icon][/assets/technologies/docker.png]
