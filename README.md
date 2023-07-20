@@ -10,8 +10,8 @@ This is my personal New Tab page which I use as home in my browsers. I use it to
 
 - :telescope: Search Capability
   - Google :heavy_check_mark:
-  - DuckDuckGo
-  - Youtube
+  - DuckDuckGo :heavy_check_mark:
+  - Youtube :heavy_check_mark:
 - :art: Theming:
   - Default Necro theme :heavy_check_mark:
   - Customization of theme
