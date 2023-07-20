@@ -7,9 +7,10 @@
     "@heroicons/react": "^2.0.18",
     "@startpage/bookmarks": "^0.2.6",
     "@startpage/local-storage": "^0.2.6",
-    "@startpage/preset": "^0.2.5",
     "@startpage/search": "^0.2.0",
     "@startpage/theming": "^0.2.6",
+    "@themeforge/preset": "^0.1.0",
+    "clsx": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

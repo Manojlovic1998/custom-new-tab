@@ -1,4 +1,8 @@
-import { BaseColors, ColorPalette, createColorScheme } from "@startpage/preset";
+import {
+  BaseColors,
+  ColorPalette,
+  createColorScheme,
+} from "@themeforge/preset";
 
 const base: BaseColors = {
   bg: "#000000",
