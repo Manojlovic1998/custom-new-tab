@@ -1,4 +1,3 @@
-import React from "react";
 import BookmarkGroup from "./BookmarkGroup";
 import BookmarkGroupHeading from "./BookmarkGroupHeading";
 import BookmarksList from "./BookmarksList";

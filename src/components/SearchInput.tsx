@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { SearchEngineName, performSearch } from "@startpage/search";
 import SearchDefaultSettings from "./SearchDefaultSettings";
 
