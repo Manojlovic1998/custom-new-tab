@@ -18,7 +18,7 @@ This is my personal New Tab page which I use as home in my browsers. I use it to
   - Customization of image/gif.
 - :bookmark: Bookmarks:
   - Default bookmarks :heavy_check_mark:
-  - Customization of bookmarks (CRUD)
+  - Customization of bookmarks (CRUD) :heavy_check_mark:
 
 ## :trumpet: Technologies
 
