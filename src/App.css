@@ -208,7 +208,7 @@ body {
 
 #searchbar {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 #searchbar > button {
@@ -365,4 +365,58 @@ body {
   right: var(--space-large);
   height: 24px;
   cursor: pointer;
+}
+
+.search-engine-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.engine-option {
+  color: rgb(var(--color-primary-fg));
+  stroke: rgb(var(--color-primary-fg));
+  fill: rgb(var(--color-primary-fg));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.engine-option:hover {
+  color: rgb(var(--color-primary-base));
+  stroke: rgb(var(--color-primary-base));
+  fill: rgb(var(--color-primary-base));
+}
+
+.engine-option .icon, .search-engine-list .icon {
+  height: calc(var(--font-size) * var(--space-large));
+}
+
+.search-engine-list .icon {
+  cursor: pointer;
+}
+
+.search-engine-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: var(--space-medium);
+  top: calc(var(--space-medium) * 2);
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 9999;
+  background-color: rgb(var(--color-bg-base));
+  color: rgb(var(--color-primary-fg));
+  stroke: rgb(var(--color-primary-fg));
+  fill: rgb(var(--color-primary-fg));
+  list-style: none;
+  border: var(--space-smallest) solid rgb(var(--color-primary-base));
+  border-radius: var(--surface-borderRadius);
+  padding: var(--space-medium) var(--space-smallest);
+
 }
