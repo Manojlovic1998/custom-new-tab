@@ -6,14 +6,15 @@
 
   /** surface */
   --surface-maxWidth: 1000px;
-  --surface-shadow: 14px 14px 0px rgb(49, 0, 147), 28px 28px 0px rgb(55.75, 0, 168.75), 42px 42px 0px rgb(62.5, 0, 190.5), 56px 56px 0px rgb(69.25, 0, 212.25), 70px 70px 0px rgb(76, 0, 234);
+  --surface-shadow: 14px 14px 0px rgb(49, 0, 147),
+    28px 28px 0px rgb(55.75, 0, 168.75), 42px 42px 0px rgb(62.5, 0, 190.5),
+    56px 56px 0px rgb(69.25, 0, 212.25), 70px 70px 0px rgb(76, 0, 234);
   --surface-borderRadius: 14px;
 
   /** others */
   --picture-size: 300px;
   --group-count: 4;
 }
-
 
 *,
 *::before,
@@ -46,11 +47,11 @@ body {
   min-height: 100%;
   min-width: 600px;
   overflow: hidden;
-  
+
   font-family: var(--font-family), sans-serif;
   font-weight: 500;
   font-size: calc(var(--font-size) * var(--space-medium));
-  background-color: var(--color-bg-base);
+  background-color: rgb(var(--color-bg-base));
 }
 
 .visually-hidden {
@@ -81,11 +82,87 @@ body {
 
   display: flex;
 
-  color: var(--color-fg-surface);
-  background-color: var(--color-bg-surface);
+  color: rgb(var(--color-fg-surface));
+  background-color: rgb(var(--color-bg-surface));
   border-radius: var(--surface-borderRadius);
-  border: var(--space-smallest) solid var(--color-primary-base);
+  border: var(--space-smallest) solid rgb(var(--color-primary-base));
   box-shadow: var(--surface-shadow);
+}
+
+.modal, .bookmarks-settings {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-large);
+  gap: var(--space-medium);
+  align-items: flex-start;
+}
+
+
+.modal .bookmarks-settings ul li {
+  list-style: none;
+}
+
+.modal .bookmarks-settings ul>li>div,.modal .bookmarks-settings ul>li>div>div { 
+  display: flex;
+  align-items: center;
+  gap: var(--space-medium);
+  font-weight: 600;
+}
+
+.modal .bookmarks-settings div > ul > li {
+  margin-top: var(--space-large);
+}
+
+.modal .bookmarks-settings ul li ul li {
+  display: flex;
+  gap: var(--space-medium);
+  justify-content: start;
+  align-items: center;
+}
+
+.surface.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--space-largest);
+  right: var(--space-largest);
+  margin: 5rem auto auto auto;
+  height: max-content;
+  max-width: var(--surface-maxWidth);
+
+  display: flex;
+
+  color: rgb(var(--color-fg-surface));
+  background-color: rgb(var(--color-bg-surface));
+  border-radius: var(--surface-borderRadius);
+  border: var(--space-smallest) solid rgb(var(--color-primary-base));
+  box-shadow: none;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-bg-surface), 0.5);
+}
+
+.modal button {
+  padding: var(--space-smallest) var(--space-medium);
+  background-color: rgb(var(--color-bg-base));
+  border: var(--space-smallest) solid rgb(var(--color-primary-fg));
+  color: rgb(var(--color-primary-fg));
+  display: flex;
+  align-items: center;
+  font-size: (var(--font-size) * var(--space-largest));
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal button .icon {
+  height: 24px;
+  padding: var(--space-smallest);
 }
 
 .image-wrapper {
@@ -115,7 +192,7 @@ body {
  **/
 
 .surface > main > h1 {
-  color: var(--color-primary-fg);
+  color: rgb(var(--color-primary-fg));
   font-size: calc(var(--font-size) * var(--space-large));
   font-weight: 500;
   margin: 0 0 var(--space-large) 0;
@@ -137,7 +214,7 @@ body {
 #searchbar > button {
   width: calc(var(--space-medium) * 2);
   height: calc(var(--space-medium) * 2);
-  color: var(--color-primary-fg);
+  color: rgb(var(--color-primary-fg));
 
   cursor: pointer;
   background-color: transparent;
@@ -159,23 +236,23 @@ body {
 }
 
 #searchbar > button:focus-visible {
-  color: var(--color-primary-base);
-  background: var(--color-bg-highlight);
+  color: rgb(var(--color-primary-base));
+  background: rgb(var(--color-bg-highlight));
   outline: var(--space-smallest) solid var(--color-fg-shade);
 }
 
-#searchbar > input {
+#searchbar > input, input {
   height: calc(var(--space-medium) * 2);
   flex: 1;
 
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: var(--space-smallest) solid var(--color-fg-base);
+  border-bottom: var(--space-smallest) solid rgb(var(--color-fg-base));
 }
 
 #searchbar > input:focus-visible {
-  border-color: var(--color-primary-base);
+  border-color: rgb(var(--color-primary-base));
 }
 
 /**
@@ -196,7 +273,7 @@ body {
 }
 
 .bookmark-group > h2 {
-  color: var(--color-secondary-fg);
+  color: rgb(var(--color-secondary-fg));
   font-size: calc(var(--font-size) * var(--space-medium));
   font-weight: 600;
 }
@@ -251,7 +328,7 @@ body {
   padding: 6px 12px;
   border-top-left-radius: var(--surface-borderRadius);
   border-top-right-radius: var(--surface-borderRadius);
-  border: solid 2px var(--color-primary-base);
+  border: solid 2px rgb(var(--color-primary-base));
   background-color: transparent;
   cursor: pointer;
 }
@@ -262,4 +339,30 @@ body {
 
 :hover.settings-btn > svg {
   height: 32px;
+}
+
+/* General Utils */
+
+.icon {
+  height: 18px;
+}
+
+.disclosure {
+  cursor: pointer
+}
+
+.bookmarks-settings .icon {
+  cursor: pointer;
+}
+
+
+.bookmarks-settings .icon:hover {
+  color: rgb(var(--color-primary-fg));
+}
+
+.modal .close-icon {
+  position: absolute;
+  right: var(--space-large);
+  height: 24px;
+  cursor: pointer;
 }

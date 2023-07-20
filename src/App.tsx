@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import { Providers } from "./Providers";
 import Heading from "./components/Heading";
