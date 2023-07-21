@@ -1,7 +1,7 @@
 import { SearchEngineName } from "@startpage/search";
-import Icon from "./icons/Icon";
+import Icon from "../icons/Icon";
 import { Fragment, useState } from "react";
-import { useOutsideClick } from "../hooks/useOutsideClick";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 
 type SupportedEngines = "duckduckgo" | "google" | "youtube";
 

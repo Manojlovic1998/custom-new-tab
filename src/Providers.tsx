@@ -6,7 +6,7 @@ import {
 import { PropsWithChildren } from "react";
 import { necro } from "./theme/necro";
 import { BookmarkConsumer, BookmarkProvider } from "@startpage/bookmarks";
-import bookmarks from "./components/bookmarks";
+import bookmarks from "./components/bookmark/bookmarks";
 import { StorageProvider } from "./StorageContext";
 
 export const Providers = ({ children }: PropsWithChildren<unknown>) => (

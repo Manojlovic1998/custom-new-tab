@@ -10,8 +10,8 @@ import {
   XMarkIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/solid";
-import Button from "./Button";
-import TextInput from "./TextInput";
+import Button from "../Button";
+import TextInput from "../TextInput";
 
 const RenderBookmarkGroups = ({
   bookmarkGroups,

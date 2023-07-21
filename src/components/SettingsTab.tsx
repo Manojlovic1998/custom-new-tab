@@ -2,7 +2,7 @@ import { BookmarkIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import Modal from "./Modal";
-import ModalBookmark from "./ModalBookmark";
+import ModalBookmark from "./bookmark/ModalBookmark";
 import ModalGeneral from "./ModalGeneral";
 
 type modalType = "bookmark" | "general" | undefined;
