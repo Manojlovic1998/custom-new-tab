@@ -14,8 +14,8 @@ This is my personal New Tab page which I use as home in my browsers. I use it to
   - Youtube :heavy_check_mark:
 - :art: Theming:
   - Default Necro theme :heavy_check_mark:
-  - Customization of theme
-  - Customization of image/gif.
+  - Customization of theme :heavy_check_mark:
+  - Customization of image/gif. :heavy_check_mark:
 - :bookmark: Bookmarks:
   - Default bookmarks :heavy_check_mark:
   - Customization of bookmarks (CRUD) :heavy_check_mark:
