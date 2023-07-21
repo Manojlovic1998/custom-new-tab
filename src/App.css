@@ -6,9 +6,6 @@
 
   /** surface */
   --surface-maxWidth: 1000px;
-  --surface-shadow: 14px 14px 0px rgb(49, 0, 147),
-    28px 28px 0px rgb(55.75, 0, 168.75), 42px 42px 0px rgb(62.5, 0, 190.5),
-    56px 56px 0px rgb(69.25, 0, 212.25), 70px 70px 0px rgb(76, 0, 234);
   --surface-borderRadius: 14px;
 
   /** others */
@@ -95,6 +92,10 @@ body {
   padding: var(--space-large);
   gap: var(--space-medium);
   align-items: flex-start;
+}
+
+.bookmarks-settings h1 .icon {
+  height: 24px;
 }
 
 
@@ -419,4 +420,32 @@ body {
   border-radius: var(--surface-borderRadius);
   padding: var(--space-medium) var(--space-smallest);
 
+}
+
+
+.general-settings h1 .icon {
+  height: 24px;
+}
+
+
+.theme-settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-large);
+}
+
+.theme-colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-large);
+}
+
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-medium)
 }

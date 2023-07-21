@@ -1,7 +1,23 @@
-export interface Input extends React.ComponentPropsWithoutRef<"input"> {}
+interface Input extends React.ComponentPropsWithoutRef<"input"> {
+  label?: string;
+}
 
 const TextInput = (props: Input) => {
-  return <input {...props} type="text" autoFocus />;
+  const inputProps = { ...props };
+
+  delete inputProps.label;
+
+  const TextInput = <input type="text" autoFocus {...inputProps} />;
+
+  if (props.label)
+    return (
+      <label className="input-label">
+        {props.label}
+        {TextInput}
+      </label>
+    );
+
+  return TextInput;
 };
 
 export default TextInput;

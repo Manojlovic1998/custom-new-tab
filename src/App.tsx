@@ -7,28 +7,31 @@ import SearchTab from "./components/SearchTab";
 import SearchForm from "./components/SearchForm";
 import Image from "./components/Image";
 import SettingsTab from "./components/SettingsTab";
+import { StorageConsumer } from "./StorageContext";
 
 function App() {
   return (
     <Providers>
-      <Card>
-        <div className="image-wrapper">
-          <Image
-            alt=""
-            className="image"
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzA0YWc5czVob3d4cjFvcnc0MXV1aG01d3Bqbm94ZWZuNjNwdjM5OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/84SFZf1BKgzeny1WxQ/giphy.gif"
-          />
-        </div>
-        <main>
-          <Heading>Happy Hacking!</Heading>
-          <SearchTab>
-            <SearchForm />
-          </SearchTab>
-          {/* <!-- Bookmarks will get inserted here! --> */}
-          <BookmarksTab />
-        </main>
-        <SettingsTab />
-      </Card>
+      <StorageConsumer>
+        {(value) => {
+          return (
+            <Card>
+              <div className="image-wrapper">
+                <Image alt="" className="image" src={value[0]} />
+              </div>
+              <main>
+                <Heading>Happy Hacking!</Heading>
+                <SearchTab>
+                  <SearchForm />
+                </SearchTab>
+                {/* <!-- Bookmarks will get inserted here! --> */}
+                <BookmarksTab />
+              </main>
+              <SettingsTab />
+            </Card>
+          );
+        }}
+      </StorageConsumer>
     </Providers>
   );
 }

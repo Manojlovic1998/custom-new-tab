@@ -213,9 +213,9 @@ const ModalBookmark = () => {
   return (
     <div className="bookmarks-settings">
       <div>
-        <h2>
+        <h1>
           <BookmarkIcon className="icon" /> Bookmarks
-        </h2>
+        </h1>
       </div>
       <div>
         <ul>

@@ -1,8 +1,9 @@
-import { BookmarkIcon, WrenchIcon } from "@heroicons/react/24/solid";
+import { BookmarkIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import Modal from "./Modal";
 import ModalBookmark from "./ModalBookmark";
+import ModalGeneral from "./ModalGeneral";
 
 type modalType = "bookmark" | "general" | undefined;
 
@@ -30,8 +31,11 @@ const SettingsTab = () => {
     <>
       <div className="settings-tab">
         <div className="settings-options-wrapper">
-          <button className="settings-btn">
-            <WrenchIcon />
+          <button
+            className="settings-btn"
+            onClick={() => onButtonClick("general")}
+          >
+            <WrenchScrewdriverIcon />
           </button>
           <button
             className="settings-btn"
@@ -50,6 +54,7 @@ const SettingsTab = () => {
             }}
           >
             {modalContentType === "bookmark" && <ModalBookmark />}
+            {modalContentType === "general" && <ModalGeneral />}
           </Modal>
         ) : (
           <></>
