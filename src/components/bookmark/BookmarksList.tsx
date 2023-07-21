@@ -1,5 +1,3 @@
-import React from "react";
-
 type Bookmark = {
   id: string;
   label: string;
